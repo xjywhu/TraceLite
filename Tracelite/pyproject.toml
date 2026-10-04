@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "Tracelite"
+version = "0.1.0"
+description = "TraceLite: training-free optical trace compression for SWE agents"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = [
+  "fonttools==4.59.0",
+  "pillow==11.3.0",
+]
+
+[project.scripts]
+tracelite-render = "swe_memory_policy.offline:main"
+
+[project.optional-dependencies]
+test = [
+  "pytest==8.4.1",
+  "ruff==0.12.5",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/swe_memory_policy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
