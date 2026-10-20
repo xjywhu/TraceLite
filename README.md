@@ -1,4 +1,4 @@
-<h1 align="center">TraceLite: Efficient Trace Compression for SWE Agents</h1>
+<h1 align="center">TraceLite</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Training-Free-2E7D32?style=flat-square" alt="Training-Free">
